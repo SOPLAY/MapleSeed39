@@ -1,0 +1,34 @@
+#questListContainer {
+  .visible {
+    display: flex;
+  }
+  .unvisible {
+    display: none;
+  }
+
+  .questList {
+    box-sizing: border-box;
+    align-items: center;
+    margin: 10px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+    .question {
+      width: 30%;
+    }
+
+    .answerList {
+      width: 20%;
+      height: 100%;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 0.25rem 0.25rem;
+      border-radius: 1rem;
+      box-sizing: border-box;
+      &.answer {
+        background: lightblue;
+      }
+    }
+  }
+}

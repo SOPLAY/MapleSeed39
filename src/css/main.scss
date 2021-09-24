@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "maple_ligjt";
+  src: url("../font/Maplestory-Light.woff") format("woff");
+}
+#bodyContainer {
+  font-family: "maple_ligjt";
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  max-width: 1300px;
+  position: relative;
+  border: 1px solid red;
+}
