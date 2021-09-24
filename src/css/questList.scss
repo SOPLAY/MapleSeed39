@@ -3,43 +3,45 @@
   margin: 0 auto;
   height: 800px;
   overflow: auto;
+  .visible {
+    display: block;
+  }
+  .unvisible {
+    display: none;
+  }
+
   .questListDiv {
-    .visible {
-      display: flex;
+    &:first-child {
+      border-bottom: 1px solid lightgray;
     }
-    .unvisible {
-      display: none;
+    & + .questListDiv {
+      border-bottom: 1px solid lightgray;
     }
-    .questListDiv {
-      & + & {
-        border-bottom: 1px solid lightgray;
-      }
+  }
+  .questList {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    box-sizing: border-box;
+
+    &:last-child {
+      border-bottom: none;
     }
-    .questList {
-      display: flex;
-      align-items: center;
-      margin: 10px 0;
+    .question {
+      width: 40%;
+    }
+
+    .answerList {
+      width: 15%;
+      height: 100%;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-align: center;
+      padding: 0.25rem 0.25rem;
+      border-radius: 1rem;
       box-sizing: border-box;
-
-      &:last-child {
-        border-bottom: none;
-      }
-      .question {
-        width: 40%;
-      }
-
-      .answerList {
-        width: 15%;
-        height: 100%;
-        font-size: 1.4rem;
-        font-weight: 500;
-        text-align: center;
-        padding: 0.25rem 0.25rem;
-        border-radius: 1rem;
-        box-sizing: border-box;
-        &.answer {
-          background: lightblue;
-        }
+      &.answer {
+        background: lightblue;
       }
     }
   }

@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import "../css/questList.scss";
+import SearchForm from "./SearchForm";
 // "seed39": [
 //     {
 //       "questNo": 1,
@@ -10,39 +11,34 @@ import "../css/questList.scss";
 //       "visible": true
 //     },
 
-function ListComponents({ questList }) {
+function ListComponents({ item }) {
+  const { question, select, answer, visible } = item;
   return (
-    <div id="questListContainer">
-      {questList.map((quest, index) => {
-        const { question, select, answer, visible } = quest;
-        return (
-          <div class="questListDiv">
-            <ul
-              key={index}
-              className={classNames(
-                "questList",
-                visible === true ? "visible" : "unvisible"
-              )}
-            >
-              <li className="question">{question}</li>
-              {select.map((sel, selIndex) => {
-                return (
-                  <li
-                    key={selIndex}
-                    className={classNames(
-                      "answerList",
-                      answer === selIndex + 1 ? "answer" : ""
-                    )}
-                  >
-                    {sel}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div
+        className={classNames(
+          "questListDiv",
+          visible === true ? "visible" : "unvisible"
+        )}
+      >
+        <ul className={classNames("questList")}>
+          <li className="question">{question}</li>
+          {select.map((sel, selIndex) => {
+            return (
+              <li
+                key={selIndex}
+                className={classNames(
+                  "answerList",
+                  answer === selIndex + 1 ? "answer" : ""
+                )}
+              >
+                {sel}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </>
   );
 }
 

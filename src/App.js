@@ -7,8 +7,7 @@ import SearchForm from "./components/SearchForm";
 function App() {
   return (
     <div id="bodyContainer">
-      <SearchForm questList={questListJson}></SearchForm>
-      <ListComponents questList={questListJson} />
+      <SearchForm questList={questListJson} />
     </div>
   );
 }
