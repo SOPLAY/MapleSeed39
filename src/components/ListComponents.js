@@ -11,34 +11,35 @@ import "../css/questList.scss";
 //     },
 
 function ListComponents({ questList }) {
-  console.log(questList);
   return (
     <div id="questListContainer">
       {questList.map((quest, index) => {
         const { question, select, answer, visible } = quest;
         return (
-          <ul
-            key={index}
-            className={classNames(
-              "questList",
-              visible === true ? "visible" : "unvisible"
-            )}
-          >
-            <li className="question">{question}</li>
-            {select.map((sel, selIndex) => {
-              return (
-                <li
-                  key={selIndex}
-                  className={classNames(
-                    "answerList",
-                    answer === selIndex + 1 ? "answer" : ""
-                  )}
-                >
-                  {sel}
-                </li>
-              );
-            })}
-          </ul>
+          <div class="questListDiv">
+            <ul
+              key={index}
+              className={classNames(
+                "questList",
+                visible === true ? "visible" : "unvisible"
+              )}
+            >
+              <li className="question">{question}</li>
+              {select.map((sel, selIndex) => {
+                return (
+                  <li
+                    key={selIndex}
+                    className={classNames(
+                      "answerList",
+                      answer === selIndex + 1 ? "answer" : ""
+                    )}
+                  >
+                    {sel}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         );
       })}
     </div>

@@ -1,11 +1,14 @@
+import React, { useContext } from "react";
 import ListComponents from "./components/ListComponents";
 import "./css/reset.css";
 import "./css/main.scss";
-import questList from "./json/Qlist";
+import questListJson from "./json/Qlist";
+import SearchForm from "./components/SearchForm";
 function App() {
   return (
     <div id="bodyContainer">
-      <ListComponents questList={questList} />
+      <SearchForm questList={questListJson}></SearchForm>
+      <ListComponents questList={questListJson} />
     </div>
   );
 }
