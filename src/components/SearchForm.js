@@ -19,6 +19,7 @@ function SearchForm({ questList }) {
           name="inputValue"
           onChange={onChange}
           value={inputValue}
+          placeholder="문제 및 보기 입력"
           autoFocus
         />
       </div>
@@ -27,7 +28,6 @@ function SearchForm({ questList }) {
           const { question, select } = item;
           const temp = select.concat(question);
           item.visible = false;
-          console.log(item);
           return (
             temp.map(
               (sel) =>
@@ -36,7 +36,6 @@ function SearchForm({ questList }) {
             ),
             (<ListComponents item={item} />)
           );
-          //   return <ListComponents item={item} />;
         })}
       </div>
     </>

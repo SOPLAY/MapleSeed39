@@ -5,14 +5,19 @@
     margin: 0 auto;
     width: 98%;
     font-family: "maple_ligjt";
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 0.5rem 2rem;
     box-sizing: border-box;
     border-radius: 1rem;
     border: 1px solid lightgray;
+    align-items: center;
   }
   > input:focus {
     outline: none;
-    border: 1px solid rgb(89, 89, 255);
+    border: 1.5px solid rgb(89, 89, 255);
+  }
+  input::placeholder {
+    color: lightgray;
+    font-size: 2rem;
   }
 }
