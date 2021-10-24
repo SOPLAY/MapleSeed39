@@ -1,5 +1,3 @@
-import React, { useContext } from "react";
-import ListComponents from "./components/ListComponents";
 import "./css/reset.css";
 import "./css/main.scss";
 import questListJson from "./json/Qlist";

@@ -1,7 +1,22 @@
 #questListContainer {
+  transition: 0.5s;
   width: 98%;
   margin: 0 auto;
   height: 800px;
+  // 반응형
+  @media (max-height: 950px) {
+    height: 600px;
+    transition: 0.5s;
+  }
+  @media (max-height: 750px) {
+    height: 500px;
+    transition: 0.5s;
+  }
+  @media (max-height: 650px) {
+    height: 300px;
+    transition: 0.5s;
+  }
+
   overflow: auto;
   .visible {
     display: block;
